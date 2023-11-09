@@ -12,7 +12,7 @@ Ended "2023/"
 Made in 70% C++ & 29% Python & 1% Json
 
 Notice: You are not allowed to change any code or codes under any files or folders in this project!,
-This whole project is protected under the Apache Licence, That is located at ChatBot\C++\Licence
+This whole project is protected under the Apache Licence, That is located at ChatBot\Licence
 
 Requierments:
 
