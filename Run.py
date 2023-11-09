@@ -25,7 +25,7 @@ if (os.name == 'nt'):
     os.system("start Main.exe")
 else:
     os.system(".\Main.exe")
-sleep(0.8)
+sleep(1.2)
 os.chdir("Json\Certificate\Config")
 if os.path.isfile("BotName.conf"):
     os.remove("BotName.conf")
