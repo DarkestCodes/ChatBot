@@ -9,7 +9,7 @@ The Owner (DarkestCodes) Is Not Responseable For Anything You As A User Do!!
 Started 2023/10/26
 First Release 2023/11/09
 
-Made in 70% C++ & 29% Python & 1% Json
+Made in C++ 63.1% Python 36.9%
 
 Notice: You are not allowed to change any code or codes under any files or folders in this project!,
 This whole project is protected under the Apache Licence, That is located at ChatBot\Licence
