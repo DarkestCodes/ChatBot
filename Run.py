@@ -1,3 +1,7 @@
+###################
+# By DarkestCodes #
+###################
+
 ##############
 # By Youssef #
 # Run.py     #
@@ -12,10 +16,11 @@ if (os.name == 'nt'):
 else:
     os.system("python3 main.py")
 
-if os.path.isfile("Certificate/python.fail"):
+if os.path.isfile("Certificate\python.fail"):
     os.chdir("Certificate")
     os.system("pause")
     os.remove("python.fail")
+    exit(1)
 
 os.chdir("..")
 os.system("g++ Main.cpp -o Main -fpermissive")
