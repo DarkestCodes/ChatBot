@@ -7,7 +7,7 @@ The Owner (DarkestCodes) Is Not Responseable For Anything You As A User Do!!
 
 
 Started 2023/10/26
-First Release 2023/11/09
+Not Finished 
 
 Made in C++ 63.1% Python 36.9%
 
