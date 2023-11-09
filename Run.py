@@ -2,10 +2,7 @@
 # By DarkestCodes #
 ###################
 
-##############
-# By Youssef #
-# Run.py     #
-##############
+# *Warning!!!! Please Don't play with the codes or the program may miss behave
 
 from time import sleep as sleep
 import os
