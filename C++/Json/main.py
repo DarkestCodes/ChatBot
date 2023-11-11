@@ -11,11 +11,12 @@ import datetime
 # Check if updates available
 os.chdir("..")
 os.chdir("..")
+print(os.getcwd())
 os.chdir("Update")
 os.chdir("Config")
 with open("update.conf", 'r') as f:
     updates = f.read()
-if update == True:
+if updates == True:
     os.chdir("..")
     os.chdir("..")
     os.chdir("..")
@@ -23,7 +24,7 @@ if update == True:
         os.system('''python -u "ChatBot\\Update\\Update.py"''')
     else:
         os.system('''python3 -u "ChatBot\\Update\\Update.py"''')
-elif update == False:
+elif updates == False:
     os.chdir("..")
     os.chdir("..")
     os.chdir("C++")
