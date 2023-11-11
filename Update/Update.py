@@ -3,7 +3,7 @@ from io import BytesIO
 from os import system as sys
 import os
 
-print('Update Started')
+print('Downloading Update')
 url = 'https://github.com/DarkestCodes/ChatBot/archive/refs/heads/main.zip'
 
 req = requests.get(url)
@@ -28,4 +28,5 @@ else:
     sys("rm -r ChatBot.old")
     os.rename("ChatBot-main", "ChatBot")
 
-print('Update Completed')
+print('Update Installed')
+input
