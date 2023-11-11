@@ -6,7 +6,7 @@ import os, shutil
 print('Downloading started')
 
 #Defining the zip file URL
-url = 'https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-zip-file.zip'
+url = 'https://github.com/DarkestCodes/ChatBot/archive/refs/heads/main.zip'
 
 # Split URL to get the file name
 filename = "Chatbot.zip"
