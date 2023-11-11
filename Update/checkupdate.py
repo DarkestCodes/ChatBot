@@ -28,8 +28,8 @@ else:
     if ask == "y":
         os.chdir("update")
         if os.name == 'nt':
-            os.system('''python -u "Update\\Update.py"''')
+            os.system('''python -u "Update.py"''')
         else:
-            os.system('''python3 -u "Update\\Update.py"''')
+            os.system('''python3 -u "Update.py"''')
     else:
         print("\n\nUpdate was Canceled!")
