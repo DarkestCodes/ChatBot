@@ -8,6 +8,34 @@ import json
 import os
 import datetime
 
+# Check if updates available
+os.chdir("..")
+os.chdir("..")
+os.chdir("Update")
+os.chdir("Config")
+with open("update.conf", 'r') as f:
+    updates = f.read()
+if update == True:
+    os.chdir("..")
+    os.chdir("..")
+    os.chdir("..")
+    if os.name == 'nt':
+        os.system('''python -u "ChatBot\\Update\\Update.py"''')
+    else:
+        os.system('''python3 -u "ChatBot\\Update\\Update.py"''')
+elif update == False:
+    os.chdir("..")
+    os.chdir("..")
+    os.chdir("C++")
+    os.chdir("Json")
+else:
+    print("Error in update.conf Value must be a boolean value!")
+    with open("python.fail", "w") as f:
+        f.write("True")
+    exit(0)
+
+
+
 # Version, Maxminum Version And UUID
 version = 1.0
 mversion = 4.1
