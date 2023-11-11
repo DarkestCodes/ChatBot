@@ -1,3 +1,9 @@
+#  //////////////////////
+#  // By DarkestCodes //
+#  ////////////////////
+
+# Do not change in the codes because the project may get corrupted
+  
 import requests, zipfile
 from io import BytesIO
 import os, shutil
