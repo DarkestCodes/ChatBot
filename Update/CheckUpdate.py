@@ -1,7 +1,12 @@
 import requests, os
 
-with open("..\\Version\Version.txt", "r") as f:
+print(os.getcwd())
+os.chdir("ChatBot")
+
+with open("Version\Version.txt", "r") as f:
     old_ver = f.read().strip()
+
+os.chdir("Update")
 
 print('Checking For Updates')
 url = 'https://raw.githubusercontent.com/DarkestCodes/ChatBot/main/Version/Version.txt'
