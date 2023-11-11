@@ -3,7 +3,7 @@ import requests, zipfile
 from io import BytesIO
 import os, shutil
 
-print('Downloading started')
+print('Update Started')
 
 #Defining the zip file URL
 url = 'https://github.com/DarkestCodes/ChatBot/archive/refs/heads/main.zip'
@@ -18,7 +18,6 @@ req = requests.get(url)
 zipfile= zipfile.ZipFile(BytesIO(req.content))
 zipfile.extractall('..\\..')
 
-os.remove("Chatbot.zip")
 os.chdir("..\\..")
 shutil.move("ChatBot", "ChatBot.old")
 shutil.move("ChatBot-main", "ChatBot")
