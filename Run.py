@@ -20,13 +20,6 @@ if os.path.isfile("Certificate\python.fail"):
     exit(1)
 os.chdir("..")
 os.chdir("..")
-if os.path.isfile("Update\Config\python.fail"):
-    os.chdir("Update\Config")
-    os.system("pause")
-    os.remove("python.fail")
-    exit(1)
-os.chdir("C++")
-os.chdir("..")
 os.system("g++ Main.cpp -o Main -fpermissive")
 if (os.name == 'nt'):
     os.system("start Main.exe")
