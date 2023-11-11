@@ -2,34 +2,19 @@ import requests, zipfile
 from io import BytesIO
 import os, shutil
 
-url = 'https://raw.githubusercontent.com/DarkestCodes/ChatBot/main/Version/version.txt'
+print('Update Started')
 
-ver = "version.txt"
+update = 'https://github.com/DarkestCodes/ChatBot/archive/refs/heads/main.zip'
 
-requ = requests.get(url)
+filename = "Chatbot.zip"
 
-new_ver = requ.content
-os.chdir("..")
-with open("Version\\version.txt", 'r') as f:
-    old_ver = f.read().strip()
+req = requests.get(update)
 
-if new_ver != old_ver:
-    print('Update Started')
+zipfile= zipfile.ZipFile(BytesIO(req.content))
+zipfile.extractall('..\\..')
 
-    update = 'https://github.com/DarkestCodes/ChatBot/archive/refs/heads/main.zip'
-
-    filename = "Chatbot.zip"
-
-    req = requests.get(update)
-
-    zipfile= zipfile.ZipFile(BytesIO(req.content))
-    zipfile.extractall('..\\..')
-
-    os.chdir("..\\..")
-    shutil.move("ChatBot", "ChatBot.old")
-    shutil.move("ChatBot-main", "ChatBot")
-    shutil.rmtree('ChatBot.old')
-    print('Update Finished')
-else:
-    print("You're Up-To-Date")
-    input
+os.chdir("..\\..")
+shutil.move("ChatBot", "ChatBot.old")
+shutil.move("ChatBot-main", "ChatBot")
+shutil.rmtree('ChatBot.old')
+print('Update Finished')
