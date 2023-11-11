@@ -1,19 +1,19 @@
 import requests
+from io import BytesIO
 import os
 
 print('Checking For Updates')
 
 #Defining the zip file URL
-url = 'http://github.com/DarkestCodes/ChatBot/blob/main/Version/version.txt'
+url = 'https://raw.githubusercontent.com/DarkestCodes/ChatBot/main/Version/version.txt'
 
 # Split URL to get the file name
-filename = "version.txt"
+filename = "nversion.txt"
 
 # Downloading the file by sending the request to the URL
 req = requests.get(url)
 
-with open("version.txt", "r") as f:
-    new_ver = f.read().strip()
+new_ver = req.content[-1]
 
 os.chdir("..")
 
