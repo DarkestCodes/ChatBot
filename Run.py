@@ -1,8 +1,7 @@
-###################
-# By DarkestCodes #
-###################
-
-# *Warning!!!! Please Don't play with the codes or the program may miss behave
+##############
+# By Youssef #
+# Run.py     #
+##############
 
 from time import sleep as sleep
 import os
@@ -18,14 +17,14 @@ if os.path.isfile("Certificate\python.fail"):
     os.system("pause")
     os.remove("python.fail")
     exit(1)
-os.chdir("..")
+
 os.chdir("..")
 os.system("g++ Main.cpp -o Main -fpermissive")
 if (os.name == 'nt'):
     os.system("start Main.exe")
 else:
     os.system(".\Main.exe")
-sleep(1.2)
+sleep(1.3)
 os.chdir("Json\Certificate\Config")
 if os.path.isfile("BotName.conf"):
     os.remove("BotName.conf")
