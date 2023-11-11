@@ -11,7 +11,6 @@ import datetime
 # Check if updates available
 os.chdir("..")
 os.chdir("..")
-print(os.getcwd())
 os.chdir("Update")
 os.chdir("Config")
 with open("update.conf", 'r') as f:
