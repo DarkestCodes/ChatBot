@@ -1,7 +1,8 @@
-##############
-# By Youssef #
-# Run.py     #
-##############
+#  //////////////////////
+#  // By DarkestCodes //
+#  ////////////////////
+
+# Do not change in the codes because the project may get corrupted
 
 from time import sleep as sleep
 import os
