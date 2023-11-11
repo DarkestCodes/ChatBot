@@ -6,17 +6,18 @@ Warning This Project Called ChatBot Is For Legal and Ethical Purposes Only!!!!
 The Owner (DarkestCodes) Is Not Responseable For Anything You As A User Do!!
 
 
-Started 2023/10/26
-Not Finished 
+Started "2023/10/26"
+Ended "2023/"
 
-Made in C++ 63.1% Python 36.9%
+Made in 70% C++ & 29% Python & 1% Json
 
 Notice: You are not allowed to change any code or codes under any files or folders in this project!,
-This whole project is protected under the Apache Licence, That is located at ChatBot\Licence
+This whole project is protected under the Apache Licence, That is located at ChatBot\C++\Licence
 
 Requierments:
 
 - Python/Python3
+- Install Python requirements.txt
 - C++
 - A Certificate
 - Terminal/Command Prompt
