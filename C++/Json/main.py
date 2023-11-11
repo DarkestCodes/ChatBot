@@ -9,31 +9,6 @@ import os
 import datetime
 
 # Check if updates available
-os.chdir("..")
-os.chdir("..")
-os.chdir("Update")
-os.chdir("Config")
-with open("update.conf", 'r') as f:
-    updates = f.read()
-if updates == "True":
-    os.chdir("..")
-    os.chdir("..")
-    os.chdir("..")
-    if os.name == 'nt':
-        os.system('''python -u "ChatBot\\Update\\Update.py"''')
-    else:
-        os.system('''python3 -u "ChatBot\\Update\\Update.py"''')
-elif updates == "False":
-    os.chdir("..")
-    os.chdir("..")
-    os.chdir("C++")
-    os.chdir("Json")
-else:
-    print("Error in update.conf Value must be a boolean value!")
-    with open("python.fail", "w") as f:
-        f.write("True")
-    exit(0)
-
 
 
 # Version, Maxminum Version And UUID
