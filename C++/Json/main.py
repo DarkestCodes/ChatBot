@@ -16,7 +16,7 @@ os.chdir("Update")
 os.chdir("Config")
 with open("update.conf", 'r') as f:
     updates = f.read()
-if updates == True:
+if updates == "True":
     os.chdir("..")
     os.chdir("..")
     os.chdir("..")
@@ -24,7 +24,7 @@ if updates == True:
         os.system('''python -u "ChatBot\\Update\\Update.py"''')
     else:
         os.system('''python3 -u "ChatBot\\Update\\Update.py"''')
-elif updates == False:
+elif updates == "False":
     os.chdir("..")
     os.chdir("..")
     os.chdir("C++")
