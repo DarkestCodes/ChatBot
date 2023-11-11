@@ -408,13 +408,7 @@ int main(){
 
         } else if (anwser.find("do you love me") != string::npos) {
             send(chatbot, "Oh of course i love you as a friend");
-
-        } else if (anwser.find("download python lib") != string::npos){
-            string piplib;
-            send(chatbot, "Yes of course i can help you with that\nWhat is the libary name: ");
-            getline(cin, piplib);
-            string pip = "pip install " + piplib;
-            string pip3 = "pip3 install " + piplib;
+            
         } else {
             cout << "\n" << chatbot << ": I didn't understand please try other keywords";
         }
