@@ -13,6 +13,16 @@ Made in 69% C++ & 31% Python
 Notice: You are not allowed to change any code or codes under any files or folders in this project!,
 This whole project is protected under the Apache Licence, That is located at ChatBot\C++\Licence
 
+
+Update to install an update please use theese commands below:
+
+Command Prompt:
+    - cd ChatBot\Update\update.py
+    - python -u "ChatBot\Update\update.py"
+Terminal:
+    - cd ChatBot\Update\update.py
+    - python3 -u "ChatBot\Update\update.py"
+
 Requierments:
 
 - Python/Python3
