@@ -20,7 +20,7 @@ if os.path.isfile("Certificate\python.fail"):
     exit(1)
 
 os.chdir("..")
-os.system("g++ Main.cpp -o Main -fpermissive")
+os.system("g++ Main.cpp -o Main")
 if (os.name == 'nt'):
     os.system("start Main.exe")
 else:
