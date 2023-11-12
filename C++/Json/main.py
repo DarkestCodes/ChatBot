@@ -171,6 +171,11 @@ def start():
             f.write("True")
         exit(0)
 
+if os.path.isfile("Certificate\Config\Credits.card"):
+        pass
+else:
+    with open("Certificate\Config\Credits.card", 'w') as f:
+        f.write("0.0")
 if os.path.isfile("Certificate\Config\Default.conf"):
     with open("Certificate\Config\Default.conf", "r") as f:
         cert = f.read()
