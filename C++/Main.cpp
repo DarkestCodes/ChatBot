@@ -4,14 +4,16 @@
 
 #include <iostream> // To define cout and many other
 #include <cstdlib> // To generate random numbers
-#include <string.h> // To use strcmp
 #include <cctype> // To change from uppercase and lowercase to lowercase
 #include <algorithm> // To change from uppercase and lowercase to lowercase
 #include <string> // To change from uppercase and lowercase to lowercase
-#include "Libs\CheckName\checkname.hpp" // Check if the username is allowed or not
-#include "Libs\GetOS\GetOS.hpp" // OS Detector 
-#include "Libs\GetCertificate\GetCertificate.hpp" // Gives you all configration info from the Certification
-#include "Libs\Calc\Calc.hpp"
+#include "Libs\Settings\CheckName\checkname.hpp" // Check if the username is allowed or not
+#include "Libs\Settings\GetOS\GetOS.hpp" // OS Detector 
+#include "Libs\Settings\GetCertificate\GetCertificate.hpp" // Gives you all configration info from the Certification
+#include "Libs\Standard\Calc\Calc.hpp"
+#include "Libs\Games\TypeCode\TypeCode.hpp"
+#include "Libs\Games\GuessNumber\GuessNumber.hpp"
+#include "Libs\Standard\Jokes\Jokes.hpp"
 
 // *Warning!!!! Please Don't play with the codes or the program may miss behave
 
@@ -361,24 +363,35 @@ int main(){
             clear();
 
         } else if (anwser == "calc" or anwser == "calculator" or anwser == "math") {
-            int input;
-            int x;
-            int y;
-                send(chatbot, "Addition(1) Subtraction(2) Division(3) Multiplication(4)\nOption: ");
-                cin >> input;
+            unsigned short input;
+            double x;
+            double y;
+            send(chatbot, "Addition(1) Subtraction(2) Division(3) Multiplication(4)\nOption: ");
+            cin >> input;
+            if(cin.fail()){
+                clear();
+                send(chatbot, "Please enter number next time");
+                cin.clear(); cin.ignore(INT_MAX,'\n');
+            } else {
                 send(chatbot, "Num1: ");
                 cin >> x;
-                send(chatbot, "Num2: ");
-                cin >> y;
-            if (isdigit(input) and isdigit(x) and isdigit(y)){
-                calc(chatbot, x, y, input);
-            } else {
-                send(chatbot, "Please use digits next time! Sorry! I couldn't handle the error exiting...");
-                system("pause");
-                break;
-
+                if(cin.fail()){
+                    clear();
+                    send(chatbot, "Please enter number next time");
+                    cin.clear(); cin.ignore(INT_MAX,'\n');
+                } else { 
+                    send(chatbot, "Num2: ");
+                    cin >> y;
+                    if(cin.fail()){
+                        clear();
+                        send(chatbot, "Please enter number next time");
+                        cin.clear(); cin.ignore(INT_MAX,'\n');
+                    } else {
+                        calc(chatbot, x, y, input);
+                        clear();
+                    }
+                }
             }
-
         } else if (anwser == "quest" or anwser == "questions" or anwser == "question" or anwser.find("ask me quest") != string::npos) {
             quest(chatbot, name, support_email);
         } else if (anwser.find("repeat after me") != string::npos or anwser.find("say after me") != string::npos){
@@ -408,9 +421,44 @@ int main(){
 
         } else if (anwser.find("do you love me") != string::npos) {
             send(chatbot, "Oh of course i love you as a friend");
-            
+
+        } else if (anwser.find("play game") != string::npos or anwser.find("play a game") != string::npos){
+            send(chatbot, "Oh ok lets play then:\n\n1 - TypeCode\n2 - Guess The Number\n3 - Cancel");
+            int option;
+            do{
+                cout << "\nOption: ";
+                cin >> option;
+                cin.clear(); cin.ignore(INT_MAX,'\n');
+
+                switch(option){
+                    case 1:
+                        TypeCode();
+                        option = 3;
+                        break;
+                    case 2:
+                        GuessNumber();
+                        option = 3;
+                        break;
+                    case 3:
+                        send(chatbot, "Ok canceled the game idea");
+                        break;
+                    default:
+                        send(chatbot, "Please choose a vaild option");
+                }
+            }while(option != 3);
+        } else if (anwser.find("tell me a joke") != string::npos or anwser.find("tell me jokes") != string::npos){
+            string joke = get_jokes();
+            send(chatbot, "One joke costs 14.5 credits");
+            if (joke == "Low On Credits"){
+                send(chatbot, joke);
+            } else {
+                send(chatbot, joke);
+            }
+        } else if (anwser.find("feedback") != string::npos or anwser.find("support") != string::npos){
+            send(chatbot, support_email);
         } else {
             cout << "\n" << chatbot << ": I didn't understand please try other keywords";
         }
     }
+    return 0;
 }
