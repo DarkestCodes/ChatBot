@@ -16,11 +16,11 @@ This whole project is protected under the Apache Licence, That is located at Cha
 
 Update >> to install an update please use theese commands below:
 
+Please open the Command Prompt / Terminal outside the ChatBot Folder and Make sure that it isn't begin used by any other process else it may break and mess everything up!
+
 Command Prompt:
-    - cd ChatBot\Update
     - python -u "ChatBot\Update\update.py"
 Terminal:
-    - cd ChatBot\Update
     - python3 -u "ChatBot\Update\update.py"
 
 Requierments:
