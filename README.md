@@ -8,7 +8,7 @@ The Owner (DarkestCodes) Is Not Responseable For Anything You As A User Do!!
 
 Started "2023/10/26"
 
-Made in 69% C++ & 31% Python
+Made in 75.9% C++ & 24.1% Python
 
 Notice: You are not allowed to change any code or codes under any files or folders in this project!,
 This whole project is protected under the Apache Licence, That is located at ChatBot\C++\Licence
