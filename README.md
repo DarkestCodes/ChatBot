@@ -3,7 +3,7 @@
 #######################
 
 Warning This Project Called ChatBot Is For Legal and Ethical Purposes Only!!!!
-The Owner (DarkestCodes) Is Not Responseable For Anything You As A User Do!!
+The Owner (DarkestCodes) Is Not Responsible For Anything Bad You As A User Do!!
 
 
 Started "2023/10/26"
@@ -14,7 +14,7 @@ Notice: You are not allowed to change any code or codes under any files or folde
 This whole project is protected under the Apache Licence, That is located at ChatBot\C++\Licence
 
 
-Update to install an update please use theese commands below:
+Update >> to install an update please use theese commands below:
 
 Command Prompt:
     - cd ChatBot\Update\update.py
