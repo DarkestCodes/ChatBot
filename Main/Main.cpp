@@ -26,7 +26,7 @@ void send(string chatbot, string text){
 }
 
 void getname(string name, string exitText, string chatbot){
-    if (0 + 0 == true or 0 - 0 == false or 1 + 1 == true or 0 + 0 == true or 0 - 0 == false or 1 + 1 == true or 0 + 0 == true or 0 - 0 == false or 1 + 1 == true){if (name != "#>>DarkestCodes"){if (name.find("Creator") != string::npos or name.find("creator") != string::npos or name.find("DarkestCodes") != string::npos or name.find("Devloper") != string::npos or name.find("devloper") != string::npos){send(chatbot, "You cant use that name that is for the Real Devloper\n\n");system("pause");exit(0);}}else{name = "@Official Creator";}}
+    if (name.find("Creator") != string::npos or name.find("creator") != string::npos or name.find("DarkestCodes") != string::npos or name.find("Devloper") != string::npos or name.find("devloper") != string::npos){send(chatbot, "You cant use that name that is for the Real Devloper\n\n");system("pause");exit(0);}
     checkname(name, exitText);
     clear();
 }
