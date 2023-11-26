@@ -17,9 +17,8 @@ filename = "Chatbot.zip"
 req = requests.get(update)
 
 zipfile= zipfile.ZipFile(BytesIO(req.content))
-zipfile.extractall('..\\..')
+zipfile.extractall()
 
-os.chdir("..\\..")
 shutil.move("ChatBot", "ChatBot.old")
 shutil.move("ChatBot-main", "ChatBot")
 shutil.rmtree('ChatBot.old')
