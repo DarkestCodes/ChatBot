@@ -2,7 +2,7 @@
 #   By DarkestCodes   #
 #######################
 
-Warning This Project Called ChatBot Is For Legal and Ethical Purposes Only!!!!
+THIS PROJECT CALLED CHATBOT IS INTENDED FOR LEGAL AND ETHICAL PURPOSES ONLY!
 The Owner (DarkestCodes) Is Not Responsible For Anything Bad You As A User Do!!
 
 
